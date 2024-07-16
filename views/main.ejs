@@ -1,0 +1,21 @@
+<%- include('./partials/header'); -%>
+
+    <h1>
+        URL Shortner
+    </h1>
+    <% if (locals.success) { %>
+        <p>Short ID generated: <%= success %></p>
+    <% } %>
+
+
+    <form action="/url" method="POST">
+        <label for="longURL">Paste a long URL</label>
+        <input type="text" name="longURL" id="longURL" placeholder="https://www.example.com" required>
+        <button type="submit">Generate</button>
+    </form>
+    
+    <br><br>
+
+    
+    
+<%- include('./partials/footer'); -%>

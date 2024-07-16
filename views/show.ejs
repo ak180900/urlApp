@@ -1,0 +1,40 @@
+<%- include('./partials/header'); -%>
+
+    <h1>
+        URL Shortner
+    </h1>    
+    <br><br>
+
+    <%  %>
+
+    <% if (locals.urls) { %>
+        <table class="table">
+            <thead>
+                <th>Index</th>
+                <th>Main URL</th>
+                <th>Short URL</th>
+                <th>Visited</th>  
+
+            </thead>
+            
+            <tbody>
+                <% urls.forEach((url, index) => { %>
+                    <tr>
+                        <td><%= index+1 %></td>
+                        <td><%= url.redirectURL %></td>
+                        <td><%= url.shortendURL %></td>
+                        <td><%= url.visited.length %></td>
+                    </tr>                    
+                <% }); %>        
+
+            </tbody>
+                      
+                    
+        </table>    
+    <% } %>
+
+
+    
+    
+    
+<%- include('./partials/footer'); -%>
